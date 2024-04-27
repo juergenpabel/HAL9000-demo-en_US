@@ -1,0 +1,6 @@
+paho-mqtt<2
+pyaudio
+vosk
+openwakeword==0.5.1
+np
+
