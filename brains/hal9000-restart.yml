@@ -1,0 +1,13 @@
+---
+
+  - name: "hal9000-command-restart"
+    signals:
+      - order: "Restart yourself"
+      - order: "Reboot"
+    neurons:
+      - mqtt_publisher:
+          broker_ip: "127.0.0.1"
+          client_id: "kalliope:mqtt_publisher"
+          topic: "hal9000/daemon/brain/command"
+          payload: "restart"
+

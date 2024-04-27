@@ -1,0 +1,9 @@
+US English model for mobile Vosk applications
+
+Copyright 2020 Alpha Cephei Inc
+
+Accuracy: 10.38 (tedlium test) 9.85 (librispeech test-clean)
+Speed: 0.11xRT (desktop)
+Latency: 0.15s (right context)
+
+2024-04-20 Juergen Pabel <juergen@pabel.net> - added LICENSE.txt (Apache 2.0), as per https://alphacephei.com/vosk/models

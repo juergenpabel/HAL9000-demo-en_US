@@ -1,0 +1,15 @@
+---
+
+  - name: "hal9000-command-shutdown"
+    signals:
+      - order: "Turn yourself off"
+      - order: "Power off"
+      - order: "Shut down"
+      - order: "Shutdown"
+    neurons:
+      - mqtt_publisher:
+          broker_ip: "127.0.0.1"
+          client_id: "kalliope:mqtt_publisher"
+          topic: "hal9000/daemon/brain/command"
+          payload: "shutdown"
+

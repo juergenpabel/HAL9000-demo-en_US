@@ -1,0 +1,84 @@
+default_trigger: "multiplexer"
+triggers:
+  - multiplexer:
+      triggers: mqtt, openwakeword
+  - mqtt:
+      topic: "kalliope/trigger/mqtt/event"
+  - openwakeword:
+      model_filename: "resources/data/openwakeword/ok_hal.onnx"
+      model_sensitivity: 0.8
+
+
+default_speech_to_text: "vosk"
+speech_to_text:
+  - vosk:
+      model_path: "resources/data/vosk/vosk-model-small-en-us-0.15"
+      sample_frequency: 16000
+
+
+default_text_to_speech: "espeak"
+cache_path: "/tmp"
+text_to_speech:
+  - espeak:
+      voice: "en-us"
+      speed: 120
+      amplitude: 30
+      pitch: 30
+      cache: True
+
+
+default_player: "pyalsaaudio"
+players:
+  - pyalsaaudio:
+     device: "default"
+     convert_to_wav: True
+
+
+hooks:
+  on_start: "hal9000-on-start"
+  on_waiting_for_trigger: "hal9000-on-waiting-for-trigger"
+  on_triggered:
+  on_start_listening: "hal9000-on-start-listening"
+  on_stop_listening: "hal9000-on-stop-listening"
+  on_order_found:
+  on_order_not_found: "hal9000-on-order-not-found"
+  on_processed_synapses:
+  on_deaf:
+  on_undeaf:
+  on_start_speaking: "hal9000-on-start-speaking"
+  on_stop_speaking:
+  on_stt_error: "hal9000-on-stt-error"
+  hal9000_ready:    "hal9000-event-ready"      # not a registered hook
+  hal9000_restart:  "hal9000-command-restart"  # not a registered hook
+  hal9000_shutdown: "hal9000-command-shutdown" # not a registered hook
+  hal9000_status:   "hal9000-command-status"   # not a registered hook
+  hal9000_volume:   "hal9000-command-volume"   # not a registered hook
+
+rest_api:
+  active: True
+  port: 5000
+  password_protected: False
+  login: admin
+  password: secret
+  allowed_cors_origin: "*"
+
+
+resource_directory:
+  signal:  "resources/signal"
+  trigger: "resources/trigger"
+  stt:     "resources/stt"
+  tts:     "resources/tts"
+  neuron:  "resources/neurons"
+
+
+var_files:
+  - variables/numbers.yml
+
+
+options:
+  recognizer_recording_timeout: 10
+  recognizer_recording_timeout_with_silence: 2
+
+
+send_anonymous_usage_stats: False
+
