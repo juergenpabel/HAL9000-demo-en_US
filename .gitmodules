@@ -1,12 +1,16 @@
 [submodule "vosk"]
 	path = resources/stt/vosk
 	url = https://github.com/juergenpabel/kalliope_stt_vosk.git
+	branch = master
 [submodule "mqtt"]
 	path = resources/trigger/mqtt
 	url = https://github.com/juergenpabel/kalliope_trigger_mqtt
+	branch = master
 [submodule "multiplexer"]
 	path = resources/trigger/multiplexer
 	url = https://github.com/juergenpabel/kalliope_trigger_multiplexer
+	branch = master
 [submodule "openwakeword"]
 	path = resources/trigger/openwakeword
 	url = https://github.com/juergenpabel/kalliope_trigger_openwakeword
+	branch = master
