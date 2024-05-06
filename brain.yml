@@ -14,7 +14,7 @@
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
           client_id: "kalliope:mqtt_publisher"
-          topic: "hal9000/event/kalliope/brain/state"
+          topic: "hal9000/event/kalliope/interface/state"
           payload: "ready"
           kalliope_memory:
             kalliope_status: "ready"
@@ -26,7 +26,7 @@
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
           client_id: "kalliope:mqtt_publisher"
-          topic: "hal9000/event/kalliope/brain/state"
+          topic: "hal9000/event/kalliope/interface/state"
           payload: "waiting"
           kalliope_memory:
             kalliope_status: "waiting"
@@ -38,7 +38,7 @@
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
           client_id: "kalliope:mqtt_publisher"
-          topic: "hal9000/event/kalliope/brain/state"
+          topic: "hal9000/event/kalliope/interface/state"
           payload: "listening"
           kalliope_memory:
             kalliope_status: "listening"
@@ -52,7 +52,7 @@
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
           client_id: "kalliope:mqtt_publisher"
-          topic: "hal9000/event/kalliope/brain/state"
+          topic: "hal9000/event/kalliope/interface/state"
           payload: "thinking"
           kalliope_memory:
             kalliope_status: "thinking"
@@ -64,7 +64,7 @@
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
           client_id: "kalliope:mqtt_publisher"
-          topic: "hal9000/event/kalliope/brain/state"
+          topic: "hal9000/event/kalliope/interface/state"
           payload: "speaking"
           kalliope_memory:
             kalliope_status: "speaking"
@@ -94,7 +94,7 @@
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
           client_id: "kalliope:mqtt_publisher"
-          topic: "hal9000/event/kalliope/brain/state"
+          topic: "hal9000/event/kalliope/interface/state"
           payload: "{{ kalliope_memory['kalliope_status'] }}"
 
 
