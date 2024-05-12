@@ -1,4 +1,4 @@
-# HAL9000-kalliope_demo-en_US
+# HAL9000-demo-en_US
 In this respository all configuration (and data) files are with english language resources, its primary purpose is to
 serve as a demo configuration for my [HAL9000 digital-voice-assistant](https://github.com/juergenpabel/HAL9000).
 
