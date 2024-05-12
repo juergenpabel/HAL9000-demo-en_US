@@ -1,6 +1,6 @@
 # HAL9000-kalliope_demo-en_US
 In this respository all configuration (and data) files are with english language resources, its primary purpose is to
-serve as a demo configuration for my [HAL9000 digital-voice-assistant](https://github.com/juergenpabel/HAL9000-kalliope).
+serve as a demo configuration for my [HAL9000 digital-voice-assistant](https://github.com/juergenpabel/HAL9000).
 
 Because multiple components of my project require language-specific configurations (primarily 'kalliope' and 'brain') and
 these configurations are pulled into that project as git submodules in their respective locations within the repository, 
