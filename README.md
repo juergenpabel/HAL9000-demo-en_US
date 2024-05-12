@@ -1,2 +1,2 @@
-# HAL9000-kalliope_demo-en_US
-Demo configuration in english for HAL9000-kalliope
+# HAL9000-demo-en_US
+Demo configuration in english for HAL9000
