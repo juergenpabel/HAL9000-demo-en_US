@@ -1,16 +1,20 @@
-[submodule "vosk"]
+[submodule "stt-vosk"]
 	path = resources/stt/vosk
 	url = https://github.com/juergenpabel/kalliope_stt_vosk.git
 	branch = master
-[submodule "mqtt"]
-	path = resources/trigger/mqtt
-	url = https://github.com/juergenpabel/kalliope_trigger_mqtt
+[submodule "trigger-mqtt"]
+	path = resources/triggers/mqtt
+	url = https://github.com/juergenpabel/kalliope_trigger_mqtt.git
 	branch = master
-[submodule "multiplexer"]
-	path = resources/trigger/multiplexer
-	url = https://github.com/juergenpabel/kalliope_trigger_multiplexer
+[submodule "trigger-multiplexer"]
+	path = resources/triggers/multiplexer
+	url = https://github.com/juergenpabel/kalliope_trigger_multiplexer.git
 	branch = master
-[submodule "openwakeword"]
-	path = resources/trigger/openwakeword
-	url = https://github.com/juergenpabel/kalliope_trigger_openwakeword
+[submodule "trigger-openwakeword"]
+	path = resources/triggers/openwakeword
+	url = https://github.com/juergenpabel/kalliope_trigger_openwakeword.git
+	branch = master
+[submodule "signal-hal9000"]
+	path = resources/signals/hal9000
+	url = https://github.com/juergenpabel/kalliope_signal_hal9000
 	branch = master

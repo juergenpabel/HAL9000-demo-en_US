@@ -9,7 +9,8 @@
 
 
   - name: "hal9000-on-start"
-    signals: []
+    signals:
+      - hal9000:
     neurons:
       - mqtt_publisher:
           broker_ip: "127.0.0.1"

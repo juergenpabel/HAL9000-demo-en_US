@@ -64,8 +64,8 @@ rest_api:
 
 
 resource_directory:
-  signal:  "resources/signal"
-  trigger: "resources/trigger"
+  signal:  "resources/signals"
+  trigger: "resources/triggers"
   stt:     "resources/stt"
   tts:     "resources/tts"
   neuron:  "resources/neurons"
