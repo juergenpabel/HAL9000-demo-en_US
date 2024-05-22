@@ -16,5 +16,5 @@
 	branch = master
 [submodule "signal-hal9000"]
 	path = resources/signals/hal9000
-	url = https://github.com/juergenpabel/kalliope_signal_hal9000
+	url = https://github.com/juergenpabel/kalliope_signal_hal9000.git
 	branch = master
