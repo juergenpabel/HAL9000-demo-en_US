@@ -30,7 +30,7 @@ text_to_speech:
 default_player: "pyalsaaudio"
 players:
   - pyalsaaudio:
-     device: "plughw:CARD=HAL9000"
+     device: "sysdefault:CARD=HAL9000"
      convert_to_wav: True
 
 
