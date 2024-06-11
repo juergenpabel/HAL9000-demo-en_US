@@ -36,6 +36,8 @@
   - name: "hal9000-on-start-listening"
     signals: []
     neurons:
+      - play:
+          filename: "resources/data/audio/dong.wav"
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
           client_id: "kalliope:mqtt_publisher"
@@ -43,8 +45,6 @@
           payload: "listening"
           kalliope_memory:
             kalliope_status: "listening"
-      - play:
-          filename: "resources/data/audio/dong.wav"
 
 
   - name: "hal9000-on-stop-listening"
