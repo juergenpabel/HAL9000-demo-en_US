@@ -107,7 +107,8 @@
           topic: "hal9000/command/kalliope/volume"
           is_json: true
     neurons:
-      - volume:
+      - normalizedvolume:
           action: "set"
           level: "{{ mqtt_subscriber_message['level'] }}"
+          mute: true
 
