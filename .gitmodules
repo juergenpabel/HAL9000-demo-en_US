@@ -19,6 +19,6 @@
 	url = https://github.com/juergenpabel/kalliope_signal_hal9000.git
 	branch = master
 [submodule "neuron-normalizedvolume"]
-	path = kalliope_neuron_normalizedvolume
+	path = resources/neurons/normalizedvolume
 	url = https://github.com/juergenpabel/kalliope_neuron_normalizedvolume.git
 	branch = master
