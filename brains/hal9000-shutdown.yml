@@ -11,5 +11,5 @@
           broker_ip: "127.0.0.1"
           client_id: "kalliope:mqtt_publisher"
           topic: "hal9000/command/brain/command"
-          payload: "shutdown"
+          payload: "poweroff"
 
