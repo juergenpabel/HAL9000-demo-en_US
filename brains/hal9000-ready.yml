@@ -4,7 +4,7 @@
     signals:
       - mqtt_subscriber:
           broker_ip: "127.0.0.1"
-          client_id: "kalliope:mqtt_subscriber"
+          client_id: "kalliope:neuron:mqtt_subscriber"
           topic: "hal9000/event/brain/ready"
     neurons:
       - play:

@@ -11,10 +11,12 @@
   - name: "hal9000-on-start"
     signals:
       - hal9000:
+          broker_ip: "127.0.0.1"
+          topic: "hal9000/event/kalliope/interface/state"
     neurons:
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
-          client_id: "kalliope:mqtt_publisher"
+          client_id: "kalliope:neuron:mqtt_publisher"
           topic: "hal9000/event/kalliope/interface/state"
           payload: "ready"
           kalliope_memory:
@@ -26,7 +28,7 @@
     neurons:
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
-          client_id: "kalliope:mqtt_publisher"
+          client_id: "kalliope:neuron:mqtt_publisher"
           topic: "hal9000/event/kalliope/interface/state"
           payload: "waiting"
           kalliope_memory:
@@ -40,7 +42,7 @@
           filename: "resources/data/audio/dong.wav"
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
-          client_id: "kalliope:mqtt_publisher"
+          client_id: "kalliope:neuron:mqtt_publisher"
           topic: "hal9000/event/kalliope/interface/state"
           payload: "listening"
           kalliope_memory:
@@ -52,7 +54,7 @@
     neurons:
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
-          client_id: "kalliope:mqtt_publisher"
+          client_id: "kalliope:neuron:mqtt_publisher"
           topic: "hal9000/event/kalliope/interface/state"
           payload: "thinking"
           kalliope_memory:
@@ -64,7 +66,7 @@
     neurons:
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
-          client_id: "kalliope:mqtt_publisher"
+          client_id: "kalliope:neuron:mqtt_publisher"
           topic: "hal9000/event/kalliope/interface/state"
           payload: "speaking"
           kalliope_memory:
@@ -89,12 +91,12 @@
     signals:
       - mqtt_subscriber:
           broker_ip: "127.0.0.1"
-          client_id: "kalliope:mqtt_subscriber"
+          client_id: "kalliope:neuron:mqtt_subscriber"
           topic: "hal9000/command/kalliope/status"
     neurons:
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
-          client_id: "kalliope:mqtt_publisher"
+          client_id: "kalliope:neuron:mqtt_publisher"
           topic: "hal9000/event/kalliope/interface/state"
           payload: "{{ kalliope_memory['kalliope_status'] }}"
 
@@ -103,7 +105,7 @@
     signals:
       - mqtt_subscriber:
           broker_ip: "127.0.0.1"
-          client_id: "kalliope:mqtt_subscriber"
+          client_id: "kalliope:neuron:mqtt_subscriber"
           topic: "hal9000/command/kalliope/volume"
           is_json: true
     neurons:
