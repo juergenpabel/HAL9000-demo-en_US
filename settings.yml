@@ -2,7 +2,10 @@ default_trigger: "multiplexer"
 triggers:
   - multiplexer:
       triggers: mqtt, openwakeword
+      broker_ip: "127.0.0.1"
+      topic: "kalliope/trigger/multiplexer/event"
   - mqtt:
+      broker_ip: "127.0.0.1"
       topic: "kalliope/trigger/mqtt/event"
   - openwakeword:
       model_filename: "resources/data/openwakeword/ok_hal.onnx"
