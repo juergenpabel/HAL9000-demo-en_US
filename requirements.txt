@@ -4,4 +4,5 @@ pyaudio
 vosk
 openwakeword==0.5.1
 np
-
+numpy<2
+pybind11
