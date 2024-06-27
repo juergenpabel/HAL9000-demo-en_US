@@ -1,11 +1,11 @@
 ---
 
-  - name: "hal9000-event-ready"
+  - name: "hal9000-command-welcome"
     signals:
       - mqtt_subscriber:
           broker_ip: "127.0.0.1"
           client_id: "kalliope:neuron:mqtt_subscriber"
-          topic: "hal9000/event/brain/ready"
+          topic: "hal9000/command/kalliope/welcome"
     neurons:
       - play:
           filename: "resources/data/audio/i-am-completely-operational-and-my-circuits-are-functioning-perfectly.wav"

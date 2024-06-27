@@ -3,21 +3,21 @@
   - includes:
         - brains/datetime-info.yml
         - brains/datetime-timer.yml
-        - brains/hal9000-ready.yml
         - brains/hal9000-restart.yml
         - brains/hal9000-shutdown.yml
+        - brains/hal9000-welcome.yml
 
 
   - name: "hal9000-on-start"
     signals:
       - hal9000:
           broker_ip: "127.0.0.1"
-          topic: "hal9000/event/kalliope/interface/state"
+          topic: "hal9000/event/kalliope/status"
     neurons:
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
           client_id: "kalliope:neuron:mqtt_publisher"
-          topic: "hal9000/event/kalliope/interface/state"
+          topic: "hal9000/event/kalliope/status"
           payload: "ready"
           kalliope_memory:
             kalliope_status: "ready"
@@ -29,7 +29,7 @@
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
           client_id: "kalliope:neuron:mqtt_publisher"
-          topic: "hal9000/event/kalliope/interface/state"
+          topic: "hal9000/event/kalliope/status"
           payload: "waiting"
           kalliope_memory:
             kalliope_status: "waiting"
@@ -43,7 +43,7 @@
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
           client_id: "kalliope:neuron:mqtt_publisher"
-          topic: "hal9000/event/kalliope/interface/state"
+          topic: "hal9000/event/kalliope/status"
           payload: "listening"
           kalliope_memory:
             kalliope_status: "listening"
@@ -55,7 +55,7 @@
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
           client_id: "kalliope:neuron:mqtt_publisher"
-          topic: "hal9000/event/kalliope/interface/state"
+          topic: "hal9000/event/kalliope/status"
           payload: "thinking"
           kalliope_memory:
             kalliope_status: "thinking"
@@ -67,7 +67,7 @@
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
           client_id: "kalliope:neuron:mqtt_publisher"
-          topic: "hal9000/event/kalliope/interface/state"
+          topic: "hal9000/event/kalliope/status"
           payload: "speaking"
           kalliope_memory:
             kalliope_status: "speaking"
@@ -97,7 +97,7 @@
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
           client_id: "kalliope:neuron:mqtt_publisher"
-          topic: "hal9000/event/kalliope/interface/state"
+          topic: "hal9000/event/kalliope/status"
           payload: "{{ kalliope_memory['kalliope_status'] }}"
 
 
