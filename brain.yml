@@ -21,6 +21,10 @@
           payload: "ready"
           kalliope_memory:
             kalliope_status: "ready"
+      - signals:
+          notification: "hal9000_stt_warmup"
+          payload:
+            filename: "resources/data/audio/dong.wav"
 
 
   - name: "hal9000-on-waiting-for-trigger"
