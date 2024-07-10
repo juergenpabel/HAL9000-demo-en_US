@@ -42,8 +42,6 @@
   - name: "hal9000-on-start-listening"
     signals: []
     neurons:
-      - play:
-          filename: "resources/data/audio/dong.wav"
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
           client_id: "kalliope:neuron:mqtt_publisher"
@@ -51,6 +49,8 @@
           payload: "listening"
           kalliope_memory:
             kalliope_status: "listening"
+      - play:
+          filename: "resources/data/audio/dong.wav"
 
 
   - name: "hal9000-on-stop-listening"
@@ -80,15 +80,43 @@
   - name: "hal9000-on-stt-error"
     signals: []
     neurons:
+      - mqtt_publisher:
+          broker_ip: "127.0.0.1"
+          client_id: "kalliope:neuron:mqtt_publisher"
+          topic: "hal9000/event/kalliope/status"
+          payload: "speaking"
+          kalliope_memory:
+            kalliope_status: "speaking"
       - play:
           filename: "resources/data/audio/i-am-sorry-there-was-an-error-in-the-ae35-unit.wav"
+      - mqtt_publisher:
+          broker_ip: "127.0.0.1"
+          client_id: "kalliope:neuron:mqtt_publisher"
+          topic: "hal9000/event/kalliope/status"
+          payload: "waiting"
+          kalliope_memory:
+            kalliope_status: "waiting"
 
 
   - name: "hal9000-on-order-not-found"
     signals: []
     neurons:
+      - mqtt_publisher:
+          broker_ip: "127.0.0.1"
+          client_id: "kalliope:neuron:mqtt_publisher"
+          topic: "hal9000/event/kalliope/status"
+          payload: "speaking"
+          kalliope_memory:
+            kalliope_status: "speaking"
       - play:
           filename: "resources/data/audio/i-am-sorry-i-did-not-understand-you.wav"
+      - mqtt_publisher:
+          broker_ip: "127.0.0.1"
+          client_id: "kalliope:neuron:mqtt_publisher"
+          topic: "hal9000/event/kalliope/status"
+          payload: "waiting"
+          kalliope_memory:
+            kalliope_status: "waiting"
 
 
   - name: "hal9000-command-status"
