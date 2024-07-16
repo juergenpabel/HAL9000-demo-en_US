@@ -25,6 +25,13 @@
           notification: "hal9000_stt_warmup"
           payload:
             filename: "resources/data/audio/dong.wav"
+      - mqtt_publisher:
+          broker_ip: "127.0.0.1"
+          client_id: "kalliope:neuron:mqtt_publisher"
+          topic: "hal9000/event/kalliope/runlevel"
+          payload: "running"
+          kalliope_memory:
+            kalliope_runlevel: "running"
 
 
   - name: "hal9000-on-waiting-for-trigger"
