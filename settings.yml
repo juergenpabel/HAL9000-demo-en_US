@@ -53,7 +53,7 @@ hooks:
   hal9000_ready:    "hal9000-event-ready"      # not a registered hook
   hal9000_restart:  "hal9000-command-restart"  # not a registered hook
   hal9000_shutdown: "hal9000-command-shutdown" # not a registered hook
-  hal9000_status:   "hal9000-command-status"   # not a registered hook
+  hal9000_runlevel: "hal9000-command-runlevel" # not a registered hook
   hal9000_volume:   "hal9000-command-volume"   # not a registered hook
 
 rest_api:

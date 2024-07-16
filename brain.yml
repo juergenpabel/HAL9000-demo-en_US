@@ -12,15 +12,15 @@
     signals:
       - hal9000:
           broker_ip: "127.0.0.1"
-          topic: "hal9000/event/kalliope/status"
+          topic: "hal9000/event/kalliope/runlevel"
     neurons:
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
           client_id: "kalliope:neuron:mqtt_publisher"
-          topic: "hal9000/event/kalliope/status"
+          topic: "hal9000/event/kalliope/runlevel"
           payload: "ready"
           kalliope_memory:
-            kalliope_status: "ready"
+            kalliope_runlevel: "ready"
       - signals:
           notification: "hal9000_stt_warmup"
           payload:
@@ -119,18 +119,18 @@
             kalliope_status: "waiting"
 
 
-  - name: "hal9000-command-status"
+  - name: "hal9000-command-runlevel"
     signals:
       - mqtt_subscriber:
           broker_ip: "127.0.0.1"
           client_id: "kalliope:neuron:mqtt_subscriber"
-          topic: "hal9000/command/kalliope/status"
+          topic: "hal9000/command/kalliope/runlevel"
     neurons:
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
           client_id: "kalliope:neuron:mqtt_publisher"
-          topic: "hal9000/event/kalliope/status"
-          payload: "{{ kalliope_memory['kalliope_status'] }}"
+          topic: "hal9000/event/kalliope/runlevel"
+          payload: "{{ kalliope_memory['kalliope_runlevel'] }}"
 
 
   - name: "hal9000-command-volume"
