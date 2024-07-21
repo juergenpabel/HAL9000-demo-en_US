@@ -7,6 +7,20 @@
           client_id: "kalliope:neuron:mqtt_subscriber"
           topic: "hal9000/command/kalliope/welcome"
     neurons:
+      - mqtt_publisher:
+          broker_ip: "127.0.0.1"
+          client_id: "kalliope:neuron:mqtt_publisher"
+          topic: "hal9000/event/kalliope/status"
+          payload: "speaking"
+          kalliope_memory:
+            kalliope_status: "speaking"
       - play:
           filename: "resources/data/audio/i-am-completely-operational-and-my-circuits-are-functioning-perfectly.wav"
+      - mqtt_publisher:
+          broker_ip: "127.0.0.1"
+          client_id: "kalliope:neuron:mqtt_publisher"
+          topic: "hal9000/event/kalliope/status"
+          payload: "waiting"
+          kalliope_memory:
+            kalliope_status: "waiting"
 
