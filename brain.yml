@@ -140,6 +140,20 @@
           payload: "{{ kalliope_memory['kalliope_runlevel'] }}"
 
 
+  - name: "hal9000-command-status"
+    signals:
+      - mqtt_subscriber:
+          broker_ip: "127.0.0.1"
+          client_id: "kalliope:neuron:mqtt_subscriber"
+          topic: "hal9000/command/kalliope/status"
+    neurons:
+      - mqtt_publisher:
+          broker_ip: "127.0.0.1"
+          client_id: "kalliope:neuron:mqtt_publisher"
+          topic: "hal9000/event/kalliope/status"
+          payload: "{{ kalliope_memory['kalliope_status'] }}"
+
+
   - name: "hal9000-command-volume"
     signals:
       - mqtt_subscriber:
@@ -152,4 +166,11 @@
           action: "set"
           level: "{{ mqtt_subscriber_message['level'] }}"
           mute: true
+          kalliope_memory:
+            kalliope_volume: "{{ mqtt_subscriber_message['level'] }}"
+      - mqtt_publisher:
+          broker_ip: "127.0.0.1"
+          client_id: "kalliope:neuron:mqtt_publisher"
+          topic: "hal9000/event/kalliope/volume"
+          payload: "{\"level\": {{ kalliope_memory['kalliope_volume'] }}}"
 
