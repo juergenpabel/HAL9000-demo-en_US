@@ -130,7 +130,7 @@
     signals:
       - mqtt_subscriber:
           broker_ip: "127.0.0.1"
-          client_id: "kalliope:neuron:mqtt_subscriber"
+          client_id: "kalliope:signal:mqtt_subscriber"
           topic: "hal9000/command/kalliope/runlevel"
     neurons:
       - mqtt_publisher:
@@ -144,7 +144,7 @@
     signals:
       - mqtt_subscriber:
           broker_ip: "127.0.0.1"
-          client_id: "kalliope:neuron:mqtt_subscriber"
+          client_id: "kalliope:signal:mqtt_subscriber"
           topic: "hal9000/command/kalliope/status"
     neurons:
       - mqtt_publisher:
@@ -158,7 +158,7 @@
     signals:
       - mqtt_subscriber:
           broker_ip: "127.0.0.1"
-          client_id: "kalliope:neuron:mqtt_subscriber"
+          client_id: "kalliope:signal:mqtt_subscriber"
           topic: "hal9000/command/kalliope/volume"
           is_json: true
     neurons:
