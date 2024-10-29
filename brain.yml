@@ -18,9 +18,9 @@
           broker_ip: "127.0.0.1"
           client_id: "kalliope:neuron:mqtt_publisher"
           topic: "hal9000/event/kalliope/runlevel"
-          payload: "ready"
+          payload: "syncing"
           kalliope_memory:
-            kalliope_runlevel: "ready"
+            kalliope_runlevel: "syncing"
       - signals:
           notification: "hal9000_stt_warmup"
           payload:
