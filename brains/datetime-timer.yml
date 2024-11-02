@@ -1,18 +1,20 @@
 ---
   - name: "datetime-timer"
     signals:
+      - order: "remind me in {{timer_minutes}} minutes"
       - order: "set a timer for {{timer_minutes}} minutes"
     neurons:
       - neurotimer:
-          minutes: "{{timer_minutes}}"
+          minutes: "{{ numbers[timer_minutes] }}"
           synapse: "datetime-timer-finished"
+          forwarded_parameters:
+            timer_minutes: "{{timer_minutes}}"
       - say:
-          message: "a timer is set for {{timer_minutes}} minutes"
+          message: "a timer is set for in {{timer_minutes}} minutes"
 
   - name: "datetime-timer-finished"
-    signals:
-      - order: ""
+    signals: []
     neurons:
       - say:
-          message: "the timer has expired"
+          message: "reminder: the timer from {{timer_minutes}} minutes ago is now expired"
 

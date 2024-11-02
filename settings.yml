@@ -48,7 +48,7 @@ hooks:
   on_deaf:
   on_undeaf:
   on_start_speaking: "hal9000-on-start-speaking"
-  on_stop_speaking:
+  on_stop_speaking: "hal9000-on-stop-speaking"
   on_stt_error: "hal9000-on-stt-error"
   hal9000_restart:  "hal9000-command-restart"  # not a registered hook
   hal9000_shutdown: "hal9000-command-shutdown" # not a registered hook

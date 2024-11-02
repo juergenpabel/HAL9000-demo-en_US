@@ -13,6 +13,7 @@
       - hal9000:
           broker_ip: "127.0.0.1"
           topic: "hal9000/event/kalliope/runlevel"
+      - orderapproximator: []
     neurons:
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
@@ -82,6 +83,18 @@
           payload: "speaking"
           kalliope_memory:
             kalliope_status: "speaking"
+
+
+  - name: "hal9000-on-stop-speaking"
+    signals: []
+    neurons:
+      - mqtt_publisher:
+          broker_ip: "127.0.0.1"
+          client_id: "kalliope:neuron:mqtt_publisher"
+          topic: "hal9000/event/kalliope/status"
+          payload: "waiting"
+          kalliope_memory:
+            kalliope_status: "waiting"
 
 
   - name: "hal9000-on-stt-error"
