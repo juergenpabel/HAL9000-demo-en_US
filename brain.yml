@@ -13,7 +13,7 @@
       - hal9000:
           broker_ip: "127.0.0.1"
           topic: "hal9000/event/kalliope/runlevel"
-      - orderapproximator: []
+      - orderapproximator: {}
     neurons:
       - mqtt_publisher:
           broker_ip: "127.0.0.1"
