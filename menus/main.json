@@ -1,0 +1,8 @@
+{ "id": "main", "text": "Main menu",
+  "items": [ {"id": "help",          "text": "Help",          "actions": [{"handler": "signal", "data": {"plugin": "frontend", "signal": {"plugin": "frontend", "data": {}}}}]},
+             {"id": "voice-command", "text": "Voice command", "actions": [{"handler": "signal", "data": {"plugin": "mqtt",     "signal": {"topic": "kalliope/trigger/mqtt/event", "payload": "trigger"}}}]},
+             {"id": "services",      "text": "Services",      "actions": [{"handler": "menu",   "data": {"loader": "file", "file": "services.json"}}]},
+             {"id": "system",        "text": "System",        "actions": [{"handler": "menu",   "data": {"loader": "file", "file": "system.json"}}]},
+             {"id": "exit",          "text": ">Exit menu<",   "actions": [{"handler": "signal", "data": {"plugin": "frontend", "signal": {"gui": {"screen": {"name": "idle", "parameter": {}}}}}}]}
+           ]
+}
