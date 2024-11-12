@@ -3,6 +3,6 @@
   "items": [
              {"id": "shutdown", "text": "Shutdown",    "actions": [{"handler": "signal", "data": {"plugin": "mqtt", "signal": {"topic": "hal9000/command/frontend/system/runlevel", "payload": "halting"}}},{"handler": "signal", "data": {"plugin": "mqtt", "signal": {"topic": "hal9000/command/brain/script", "payload": {"script": {"id": "poweroff"}}}}}]},
              {"id": "restart",  "text": "Restart",     "actions": [{"handler": "signal", "data": {"plugin": "mqtt", "signal": {"topic": "hal9000/command/frontend/system/runlevel", "payload": "restarting"}}},{"handler": "signal", "data": {"plugin": "mqtt", "signal": {"topic": "hal9000/command/brain/script", "payload": {"script": {"id": "reboot"}}}}}]},
-             {"id": "main",     "text": ">Main menu<", "actions": [{"handler": "menu",   "data": {"loader": "file", "file": "main.json"}}]}
+             {"id": "menu:main","text": ">Main menu<", "actions": [{"handler": "menu",   "data": {"id": "main"}}]}
            ]
 }

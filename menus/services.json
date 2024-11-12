@@ -2,8 +2,8 @@
   "id": "services",
   "text": "Services",
   "items": [
-             {"id": "frontend", "text": "Frontend",    "actions": [{"handler": "signal", "data": {"plugin": "frontend", "signal": {"gui": {"screen": {"name": "qrcode", "parameter": {"title": "Frontend", "url": "http://{ipv4}:9000/", "hint": "http://{ipv4}:9000/"}}}}}}]},
-             {"id": "console",  "text": "Console",     "actions": [{"handler": "signal", "data": {"plugin": "frontend", "signal": {"gui": {"screen": {"name": "qrcode", "parameter": {"title": "Console", "url": "http://{ipv4}:2001/", "hint": "http://{ipv4}:2001/"}}}}}}]},
-             {"id": "main",     "text": ">Main menu<", "actions": [{"handler": "menu",   "data": {"loader": "file", "file": "main.json"}}]}
+             {"id": "frontend",  "text": "Frontend",    "actions": [{"handler": "signal", "data": {"plugin": "frontend", "signal": {"gui": {"screen": {"name": "qrcode", "parameter": {"title": "Frontend", "url": "http://{ipv4}:9000/", "hint": "http://{ipv4}:9000/"}}}}}}]},
+             {"id": "console",   "text": "Console",     "actions": [{"handler": "signal", "data": {"plugin": "frontend", "signal": {"gui": {"screen": {"name": "qrcode", "parameter": {"title": "Console", "url": "http://{ipv4}:2001/", "hint": "http://{ipv4}:2001/"}}}}}}]},
+             {"id": "menu:main", "text": ">Main menu<", "actions": [{"handler": "menu",   "data": {"id": "main"}}]}
            ]
 }
